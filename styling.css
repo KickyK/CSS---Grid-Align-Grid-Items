@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+div {
+    background-color: #66a5AD;
+    color: aliceblue;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.container {
+    background-color: #07575B;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: [coll-left] 20% 100px 2fr minmax(200px, 1fr);
+    grid-gap: 5px;
+    padding: 7px;
+    grid-template-areas: 
+        "a b c d"
+        "e f g h"
+        "i j k l"
+        "m n o p";
+}
+
+#apple {
+ /*   grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 3;   
+*/
+    grid-area: 1/coll-left/3/3;
+}
+
+#facebook {
+    grid-area: 3/3;
+}
+
+#microsoft {
+/* span rows then colums */
+    grid-area: 3/1/span 2/ span 2;
+}
+
+#samsung {
+    grid-area: 5/1/5/5;
+}
+
+#google {
+    grid-area: h/h/p/p;
+}
+
+
